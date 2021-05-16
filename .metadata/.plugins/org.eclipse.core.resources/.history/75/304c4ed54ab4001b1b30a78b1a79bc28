@@ -1,0 +1,14 @@
+package com.ikl.test;
+
+public class Pupppy extends Dog{
+	private String size = "small";
+	public Puppy()
+	
+	void getSize() {
+		System.out.println("Size: " + this.size);
+	}
+	
+	public static void main(String arg[]) {
+		Dog puppy = new Puppy();
+	}
+}
