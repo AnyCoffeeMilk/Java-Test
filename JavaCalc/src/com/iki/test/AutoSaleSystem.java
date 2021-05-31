@@ -1,21 +1,34 @@
 package com.iki.test;
 
-public class AutoSaleSystem {
+import java.io.*;
+
+public class AutoSaleSystem{
 	public int money;
-	static int m1000 = 10;
-	static int m500 = 10;
-	static int m100 = 10;
-	static int m50 = 10;
-	static int m10 = 10;
-	static int m5 = 10;
-	static int m2 = 10;
-	static int m1 = 10;
-	static int m05 = 10;
-	static int m02 = 10;
-	static int m01 = 10;
+	int m1000;
+	int m500;
+	int m100;
+	int m50;
+	int m10;
+	int m5;
+	int m2;
+	int m1;
+	int m05;
+	int m02;
+	int m01;
 	
-	public AutoSaleSystem(int m) {
+	public AutoSaleSystem(int m, String[] a) {
 		this.money = m;
+		this.m1000 = Integer.parseInt(a[0]);
+		this.m500 = Integer.parseInt(a[1]);
+		this.m100 = Integer.parseInt(a[2]);
+		this.m50 = Integer.parseInt(a[3]);
+		this.m10 = Integer.parseInt(a[4]);
+		this.m5 = Integer.parseInt(a[5]);
+		this.m2 = Integer.parseInt(a[6]);
+		this.m1 = Integer.parseInt(a[7]);
+		this.m05 = Integer.parseInt(a[8]);
+		this.m02 = Integer.parseInt(a[9]);
+		this.m01 = Integer.parseInt(a[10]);
 	}
 	public void calc(int p) {
 		int money = this.money;
@@ -100,8 +113,11 @@ public class AutoSaleSystem {
 	public void getMoney() {
 		System.out.println("Your Money: " + this.money);
 	}
-	public static void main(String args[]) {
-		AutoSaleSystem a = new AutoSaleSystem(1000);
+	public static void main(String args[]) throws IOException{
+		File file = new File("C:/Users/ACER/Desktop/Java-Test/input/abc.txt");
+		BufferedReader br = new BufferedReader(new FileReader(file));
+		String[] abc = br.readLine().split(",");
+		AutoSaleSystem a = new AutoSaleSystem(1000, abc);
 		a.calc(14);
 		a.getMoney();
 		a.calc(53);
