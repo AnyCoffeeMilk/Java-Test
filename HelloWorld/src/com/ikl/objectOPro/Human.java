@@ -1,6 +1,6 @@
-package com.ikl.test;
+package com.ikl.objectOPro;
 
-import com.ikl.test.drinks.*;
+import com.ikl.objectOPro.drinks.*;
 
 public class Human {
 	private int age;
@@ -10,7 +10,7 @@ public class Human {
 		this.age = age;
 	}
 	public void use(Cup cup) {
-		cup.drink(this.name, this.age);
+		cup.drink(this.age);
 	}
 	public static void main(String args[]) {
 		Human Jayden = new Human("Jayden", 16);

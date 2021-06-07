@@ -1,4 +1,4 @@
-package com.ikl.test;
+package com.ikl.objectOPro;
 
 public abstract class Drinks {
 	private String name;

@@ -1,6 +1,6 @@
-package com.ikl.test.drinks;
+package com.ikl.objectOPro.drinks;
 
-import com.ikl.test.Drinks;
+import com.ikl.objectOPro.Drinks;
 
 public class Tea extends Drinks {
 	public Tea() {
